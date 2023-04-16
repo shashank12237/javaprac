@@ -52,20 +52,16 @@ public static void mapApproach(String str ) {
     // the HashMap
 	
 	 Set<Character> keySet = maps.keySet();
-	 String res="";
-	 for(Character i:keySet) {
-    	 res=res+i;
-     }
+	 
+
      // Creating an ArrayList of keys
      // by passing the keySet
-	 /*
-     ArrayList<Character> listOfKeys
-         = new ArrayList<>(keySet);
+//     ArrayList<Character> listOfKeys
+//         = new ArrayList<>(keySet);
      String res="";
-     for(Character i:listOfKeys) {
+     for(Character i:keySet) {
     	 res=res+i;
      }
-     */
      System.out.println(res);
 }
 	public static void main(String[] args) {

@@ -12,7 +12,7 @@ public class SecondLargest {
 			for(int j=0;j<a.length-i-1;j++) {
 				if(a[j]>a[j+1])
 				{
-					temp=a[j]; 
+					temp=a[j];
 					a[j]=a[j+1];
 					a[j+1]=temp;
 				}
@@ -36,25 +36,7 @@ public class SecondLargest {
 		System.out.println(second);
 		//overall time comp o(N2+N)==>o(N2)
 	}
-	/*
-	 * approach 3
-	 * class Solution {
-    int print2largest(int arr[], int n) {
-        int temp=0;
-        Arrays.sort(arr);//12 35 1 10 34 1
-        for(int i=n-1;i>=1;i--)
-        {
-            if(arr[i]!=arr[i-1])
-            {
-                temp=arr[i-1];
-                 return temp;
-                
-            }
-        }
-        return -1;
-    }best
-}
-	 */
+	
 	public static void second(int a[])
 	{
 		int n=a.length;

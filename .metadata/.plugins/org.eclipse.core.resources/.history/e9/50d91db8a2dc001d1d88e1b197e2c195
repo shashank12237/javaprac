@@ -52,7 +52,7 @@ public class SecondLargest {
             }
         }
         return -1;
-    }best
+    }
 }
 	 */
 	public static void second(int a[])
