@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;cop.prime&apos; to &apos;Prime&apos;&#x0D;&#x0A;- Original project: &apos;basics&apos;&#x0D;&#x0A;- Original element: &apos;cop.prime&apos;&#x0D;&#x0A;- Renamed element: &apos;cop.Prime&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;prime&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;cop{prime.java[prime" matchStrategy="1" name="Prime" qualified="false" references="true" similarDeclarations="false" stamp="1679029221436" textual="false" version="1.0"/>
+</session>

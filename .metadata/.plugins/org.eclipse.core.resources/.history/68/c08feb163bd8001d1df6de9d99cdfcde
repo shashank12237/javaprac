@@ -1,0 +1,15 @@
+package operations;
+
+public class Reverse {
+
+	public static void main(String[] args) {
+		String str="eureka";
+		char[] ch=str.toCharArray();
+		for(int i=str.length();i>=0;i--)
+		{
+			System.out.print(ch[i]);
+		}
+
+	}
+
+}

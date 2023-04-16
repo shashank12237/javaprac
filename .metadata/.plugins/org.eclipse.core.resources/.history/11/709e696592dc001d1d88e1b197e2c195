@@ -1,0 +1,44 @@
+package operations;
+
+import java.util.*;
+
+public class DuplicateElemtsRemove {
+public static void duplicacy(String str)
+{
+	//using indexOf()
+	int n=str.length();
+	String res=new String();
+	for(int i=0;i<n;i++)
+	{
+		char c=str.charAt(i);
+		if(res.indexOf(c)<0)
+		{
+			res+=c;
+		}
+	}
+	System.out.println(res);
+}
+public static void setApproach(String str)
+{
+	char[] ch=str.toCharArray();
+	Set<Character>sets=new LinkedHashSet<>();
+	for(Character c:ch)
+	{
+		sets.add(c);
+	}
+	System.out.println(sets);
+}
+	public static void main(String[] args) {
+		String str="programming";
+		StringBuilder sb =new StringBuilder();
+		str.chars().distinct().forEach(c -> sb.append((char)c));
+		//convertng String Builder to String
+		String s=sb.toString();
+		System.out.println(s);
+		//or Syso(sb);==> we can also directly pring sb
+		//str.chars().distinct().foreach(c=> sb.apend((char)c))
+		duplicacy( str);
+		setApproach( str);
+	}
+
+}

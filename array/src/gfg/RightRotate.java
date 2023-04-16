@@ -1,0 +1,55 @@
+package gfg;
+
+import java.util.*;
+
+public class RightRotate {
+	public static void rotate(int arr[],int d) {
+		//arr[]= {1,2,3,4,5,6};
+		int n=arr.length; 
+		
+		int count=0;
+		while(count!=d)
+		{int brr[]=new int[n];
+			int temp=arr[n-1];
+			for(int i=1;i<n;i++) {
+				brr[i]=arr[i-1];
+			}
+			brr[0]=temp;
+			arr=brr;
+			
+			count++;
+		}
+		System.out.println(Arrays.toString(arr));
+	}
+	public static void main(String[] args) {
+		int arr[]= {1,2,3,4,5,6};
+		int n=arr.length;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the value of d ");
+		int d=sc.nextInt();
+		//int temp[]=new int[d];
+		//step 1 ==> saving the values upto d which have to be rotated at end of array
+		/*
+		for(int i=0;i<d;i++) {
+			temp[i]=arr[i];//[1 2 3]
+		}
+	//	System.out.println(Arrays.toString(temp));
+//step 2 shifting rem n-d lements to front 
+		
+		for(int i=n-d;i<=n;i++)
+		{
+			arr[i-(n-d)]=arr[i-1];
+		}
+	//	System.out.println(Arrays.toString(arr));
+		//shifting rem elemts of temp to right side or at end of array
+		for(int i=n-d;i<n;i++)
+		{
+			arr[i]=temp[i-(n-d)];
+		}
+		System.out.println(Arrays.toString(arr));
+		*/
+		System.err.println("via approach 2 ");
+        rotate(arr,d);
+	}
+
+}

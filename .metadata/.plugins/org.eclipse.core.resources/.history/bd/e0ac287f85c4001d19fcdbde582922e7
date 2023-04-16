@@ -1,0 +1,18 @@
+package cop;
+
+public class Prime {
+public static void prime(int a) {
+	int flag=0;
+
+	if(a==0||a==1)
+		System.out.println("not a prime nbr");
+	else {
+		
+	}//end of else
+}
+	public static void main(String[] args) {
+	
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package cop;
+
+public class Palindrome {
+public static void number(int n) {
+	int temp,div,sum=0;
+	temp=n;
+	while(n>0) {
+		div=temp%10;
+		sum=sum*10+div;
+		temp=temp/10;
+	}
+	if(sum==n)
+		System.out.println("its a palindrome ");
+	else
+		System.out.println("not a palindrome");
+}
+	public static void main(String[] args) {
+		int a=111;
+		number(a);
+
+	}
+
+}

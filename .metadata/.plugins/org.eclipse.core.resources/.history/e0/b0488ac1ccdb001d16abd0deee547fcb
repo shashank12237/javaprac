@@ -1,0 +1,31 @@
+package gfg;
+import java.util.*;
+public class Intersection {
+public static void approach1(int arr1[],int arr2[]) {
+	List<Integer>lists=new ArrayList<Integer>();
+	int visited[]=new int[arr2.length];
+	Arrays.sort(arr1);
+	Arrays.sort(arr2);
+	for(int i=0;i<arr1.length;i++)
+	{
+		for(int j=0;j<arr2.length;j++)
+		{//if element matches and has not been matched with any other before
+			if(arr1[i]==arr2[j] && visited[j]==0 ) {
+				lists.add(arr2[j]);
+				visited[j]=1;
+				break;
+			}
+			else if(arr2[j]>arr1[i])
+			{//because array is sorted , element will not be beyond this
+				break;
+			}
+		}
+	}
+}
+	public static void main(String[] args) {
+		int A[]= {1,2,3,3,4,5,6,7};
+		  int B[]= {3,3,4,4,5,8};
+
+	}
+
+}

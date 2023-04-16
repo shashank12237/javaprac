@@ -1,0 +1,87 @@
+package gfg;
+import java.util.*;
+public class Intersection {
+public static void approach1(int arr1[],int arr2[]) {
+	List<Integer>lists=new ArrayList<Integer>();
+	int visited[]=new int[arr2.length];
+
+	Arrays.sort(arr1);
+	Arrays.sort(arr2);
+	for(int i=0;i<arr1.length;i++)//{1,2,3,3,4,5,6,7};
+	{
+		for(int j=0;j<arr2.length;j++)//{3,3,4,4,5,8};
+		{//if element matches and has not been matched with any other before
+			if(arr1[i]==arr2[j] && visited[j]==0 ) {
+				lists.add(arr2[j]);
+				visited[j]=1;
+				break;
+			}
+			else if(arr2[j]>arr1[i])
+			{//because array is sorted , element will not be beyond this
+				break;
+			}
+		}
+	}
+	System.out.println(lists);
+	System.out.println("visited"+Arrays.toString(visited));//[1, 1, 1, 0, 1, 0]
+}
+public static void approach2(int arr1[],int arr2[]) {//not good cz itgivs intersctn
+	// as well as unique elements
+	HashSet<Integer>set1=new HashSet<Integer>();
+	HashSet<Integer>intersect=new HashSet<Integer>();
+	//convertng array to hashset
+	//addng elements to set
+	for(Integer i:arr1)
+	{
+		set1.add(i);
+	}
+	//now making a set that has intersect values
+	for(Integer i:arr2)
+	{if(set1.contains(i))
+		intersect.add(i);
+	}
+	//now we have intersection convertng it back to an array
+	int size=intersect.size();
+	int ans[]=new int[size];
+	int index=0;
+	for(Integer i: intersect)
+	{
+		ans[index++]=i;
+	}
+	System.out.println(Arrays.toString(ans));
+}//end of approach2
+public static void approach3(int arr1[],int arr2[]) {
+	Map<Integer,Integer>map1=new HashMap<Integer, Integer>();
+	ArrayList<Integer>list=new ArrayList<Integer>();
+//	int count=0;
+	for(int i:arr1)
+	{	/*if(!map1.containsKey(i))
+	agar map1 mein particulr key (i.e arr1 ka element)present nahi hai 
+	simply uss element ko as a key add kr do aur count ko 1 kr do
+	map1.put(i, 1);
+	
+	else
+	agar map1 mein particular key already present hai to we have to increase
+	 the count to do so map1.put(i,map1.get(i)+1)==>
+	 map1.get(i)==> gives value(i.e count) of that particular key(i.e element)
+	 and usko increment kr do ==> means increase the count if that
+	  element already exist in our map 
+	
+	 	*/
+		if(!map1.containsKey(i))//  
+		map1.put(i, 1);
+	else
+		map1.put(i, map1.get(i)+1);
+	}
+	System.out.println(map1);
+}
+	public static void main(String[] args) {
+		int A[]= {1,2,3,3,4,5,6,7};
+		  int B[]= {3,3,4,4,5,8};
+approach1(A, B);
+approach2(A, B);//not good cz itgivs intersctn
+// as well as unique elements
+approach3(A, B);
+	}
+
+}

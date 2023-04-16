@@ -1,0 +1,93 @@
+package gfg;
+
+import java.util.*;
+
+public class MoveZerosToEnd {
+public static void approach1(int arr[],int n) {
+	int brr[]=new int[n];
+	
+	for(int i=0,k=0;i<n;i++)
+	{
+		
+		if(arr[i]!=0)
+		{
+			brr[k]=arr[i];
+			k++;
+		}
+	}
+	System.out.println(Arrays.toString(brr));
+}//end approach 1
+
+public static void approach2(int arr[],int n)
+{
+	int count =0;
+	List<Integer>lists=new ArrayList<Integer>();
+	
+	for(int i=0;i<n;i++)
+	{
+		if(arr[i]==0)
+		{
+			count++;
+		}
+		
+		if(arr[i]!=0) {
+			lists.add(arr[i]);
+		}
+	}
+	System.out.println("count is "+count);
+	
+	if(count!=0) {
+		for(int i=0;i<count;i++)
+		{
+			lists.add(0);
+		}
+	}
+	System.out.println(lists);
+}
+public static void approach3(int arr[],int n) {
+	int i;
+	//traverse i to get first occurnc of 0
+	for( i=0;i<n;i++)
+	{
+		if(arr[i]==0)
+		break;
+		else {
+				i=i+1;
+			  }
+	}
+	int k=i;int j=i+1;
+	//now place j next to i
+	//if j !=0 then swap k and j
+	//else j++
+	while(k<n&&j<n)
+	{
+		if(arr[j]!=0)
+		{
+			int temp=arr[k];
+			arr[k]=arr[j];
+			arr[j]=temp;
+			k++;
+		}
+		j++;
+	}
+	System.out.println(Arrays.toString(arr));
+}
+	public static void main(String[] args) {
+		int arr[]= {0,1,0,2,0,3,2,0,0,4,5,1};
+		int n=arr.length;
+		//int count =0;
+		//approach1(arr,n);
+		//approach2(arr,n);
+		/*
+		 * in approach2 i discoverd heap out of memory
+		 * int a=0;
+	if(count!=0) {
+		while(a!=count) {
+			lists.add(0);
+		}
+	}
+		 */
+		approach3(arr,n);
+	}
+
+}

@@ -1,0 +1,18 @@
+package gfg;
+
+import java.util.Set;
+
+public class RemoveDuplicates {
+public static void duplicateSet(int arr[])
+{
+	Set<Integer>sets=Hashset<Integer>();
+	for(int i:arr)
+	{
+		
+	}
+}
+	public static void main(String[] args) {
+		int arr[]= {1,1,2,2,2,3,3,6,5,9,9};
+	}
+
+}

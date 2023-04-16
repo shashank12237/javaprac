@@ -1,0 +1,54 @@
+package cop;
+
+import java.util.Scanner;
+
+public class Prime {
+public static void prime(int a) {
+	boolean flag=false;
+
+	if(a==0||a==1)
+		System.out.println("invalid cases");
+	else {
+		for(int i=2;i<=a/2;i++) {
+			if(a%i==0) {
+				System.out.println("not a prime ");
+				flag=true;
+				break;
+			}
+		}
+		if(flag==false)
+		{
+			System.out.println("its a prime ");
+		}
+		
+	}//end of else
+}//end of m()
+
+public static void range(int a) {
+	boolean flag=false;
+	int j=2;
+	if(a==0||a==1)
+		System.out.println("invalid cases");
+	else {
+		for(int i=2;i<=a/2;i++) {
+			if(j%i==0) {
+				System.out.println("not a prime ");
+				flag=true;
+				break;
+			}
+		}
+		if(flag==false)
+		{
+			System.out.println("its a prime ");
+		}
+		
+	}//end of else
+}
+	public static void main(String[] args) {
+	System.out.println("enter the nbr");
+	Scanner sc =new Scanner(System.in);
+	int n=sc.nextInt();
+	prime(n);
+	}
+
+}
