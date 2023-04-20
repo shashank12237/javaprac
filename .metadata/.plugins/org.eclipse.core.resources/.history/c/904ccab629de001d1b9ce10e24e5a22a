@@ -1,0 +1,28 @@
+package EncapsulationConcepts;
+
+public class Test1 {
+ int rollno;//by default private
+String name;//by default private
+private Test1(String name,int rollno)
+{
+	this.name=name;
+	this.rollno=rollno;
+}
+public Test1(String name)
+{
+	this.name=name;
+	
+}
+public int getRollno() {
+	return rollno;
+}
+public void setRollno(int rollno) {
+	this.rollno = rollno;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+}

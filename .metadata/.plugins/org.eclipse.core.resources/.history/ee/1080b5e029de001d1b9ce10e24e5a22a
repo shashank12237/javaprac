@@ -1,0 +1,47 @@
+package EncapsulationConcepts;
+
+public class Test1 {
+	/*
+	 * Access specifiers on instance variables:
+	 * 1 Private(by default)\
+	 * 2 Protected
+	 * 3 Public
+	 */
+	
+	
+ int rollno;//by default private
+String name;//by default private
+
+
+public Test1(String name,int rollno)
+{
+	this.name=name;
+	this.rollno=rollno;
+}
+private Test1(String name)
+{
+	this.name=name;
+	
+}
+private void show() {
+	System.out.println(name+" "+rollno);
+}
+public void display(){
+	//Test1(name); calling ctor inside a m() not allowed
+	
+}
+
+//getters and setters
+public int getRollno() {
+	return rollno;
+}
+public void setRollno(int rollno) {
+	this.rollno = rollno;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+}

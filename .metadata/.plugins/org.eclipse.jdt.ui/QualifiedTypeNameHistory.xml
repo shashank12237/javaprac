@@ -10,7 +10,6 @@
     <fullyQualifiedTypeName name="producer_consumer.company"/>
     <fullyQualifiedTypeName name="producer_consumer.Product"/>
     <fullyQualifiedTypeName name="producer_consumer.Consumer"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="Indian"/>
     <fullyQualifiedTypeName name="Arizona"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
@@ -35,4 +34,6 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="EncapsulationConcepts.Test1"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

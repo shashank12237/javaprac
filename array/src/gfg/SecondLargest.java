@@ -87,6 +87,8 @@ public class SecondLargest {
 		second( arr);
 		System.out.println("for sec inpt");
 		second( brr);
+		
+		
 	}
 
 }
